@@ -23,6 +23,8 @@ export default function Sidebar({ activePage, onNavigate, profile, onSignOut, on
     <aside style={{
       width: 240,
       minHeight: '100vh',
+      height: '100%',
+      overflowY: 'auto',
       background: '#0f172a',
       display: 'flex',
       flexDirection: 'column',

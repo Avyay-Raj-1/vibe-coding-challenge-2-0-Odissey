@@ -325,6 +325,15 @@ body {
   min-width: 160px;
 }
 
+/* ─── Responsive Utilities ─── */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none !important;
+}
+
 /* ─── Responsive Breakpoints ─── */
 @media (max-width: 1024px) {
   .stats-grid {
@@ -338,53 +347,97 @@ body {
   }
 
   .sidebar-desktop {
-    display: none;
+    display: none !important;
   }
 
   .hamburger-btn {
-    display: block;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .sidebar-mobile-overlay.open {
-    display: block;
+    display: block !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .show-on-mobile {
+    display: flex !important;
   }
 
   .app-content {
-    padding: 16px;
+    padding: 14px 12px;
   }
 
   .app-topbar {
-    padding: 0 16px;
+    padding: 0 14px;
+    height: 52px;
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 9px 10px;
+    font-size: 13px;
   }
 
   /* hide less important table columns on mobile */
   .hide-mobile {
-    display: none;
+    display: none !important;
+  }
+
+  .modal-overlay {
+    padding: 12px;
   }
 
   .modal-box {
-    padding: 20px;
+    padding: 18px 14px;
+    border-radius: 12px;
+    max-width: 100%;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .filter-bar {
     flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
   }
 
   .filter-bar .form-input,
-  .filter-bar .form-select {
-    width: 100%;
-    min-width: unset;
+  .filter-bar .form-select,
+  .filter-bar .btn {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+  }
+
+  .card {
+    padding: 14px !important;
+    border-radius: 10px;
   }
 }
 

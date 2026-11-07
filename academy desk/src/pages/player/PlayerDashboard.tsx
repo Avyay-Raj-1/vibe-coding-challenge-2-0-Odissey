@@ -100,7 +100,7 @@ export default function PlayerDashboard({ profile, onSignOut }: PlayerDashboardP
               <ProgressBar value={readiness.attendance_percentage} />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(75px, 1fr))', gap: 10 }}>
               {[
                 { label: 'Present', value: readiness.present_sessions, color: '#10b981' },
                 { label: 'Absent', value: readiness.absent_sessions, color: '#ef4444' },

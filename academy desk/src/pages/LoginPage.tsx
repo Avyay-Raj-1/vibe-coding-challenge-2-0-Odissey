@@ -163,7 +163,7 @@ export default function LoginPage({ onSignIn }: LoginPageProps) {
 
                 <div className="form-group">
                   <label className="form-label">Account Role</label>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: 8 }}>
                     {[
                       { r: 'scout' as UserRole, label: '🔍 Scout', desc: 'View ready players' },
                       { r: 'coach' as UserRole, label: '🧑‍🏫 Coach', desc: 'Manage academy' },
@@ -248,7 +248,7 @@ export default function LoginPage({ onSignIn }: LoginPageProps) {
             <div style={{ fontSize: 11, fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: 10 }}>
               ⚡ 1-Click Instant Demo Logins
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: 8 }}>
               <button
                 type="button"
                 onClick={() => handleQuickLogin('coach@academydesk.in', 'Coach@1234')}
