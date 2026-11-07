@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd \"academy desk\" && npm run build",
-  "outputDirectory": "academy desk/dist",
   "framework": "vite",
   "rewrites": [
     {
